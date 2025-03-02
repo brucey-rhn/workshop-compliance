@@ -31,6 +31,8 @@
 
 - name: Ansible Playbook for xccdf_org.ssgproject.content_profile_cis_server_l1
   hosts: all
+  become: true
+  become_method: sudo
   vars:
     var_system_crypto_policy: !!str DEFAULT:NO-SHA1
     inactivity_timeout_value: !!str 900
